@@ -4,7 +4,7 @@ import { colors } from "../Colors";
 import { TextProps } from "./types";
 
 const StyledText = styled.Text`
-font-Size: 24px;
+font-Size: 15px;
 color: ${colors.gray};
 text-align: left;
 font-family: Lato-Regular;

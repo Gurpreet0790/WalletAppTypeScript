@@ -3,8 +3,7 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components/native'
 import { Container } from '../components/Shared';
 import { colors } from '../components/Colors';
-import { WELCOMEBG } from "../util/ImageConstants"
-import backgroundImg from "../assets/WelcomeScreenBackground.png";
+import backgroundImg from "../../assets/WelcomeScreenBackground.png";
 import BigText from '../components/Texts/BigText';
 import SmallText from '../components/Texts/SmallText';
 import RegularButton from '../components/Button/RegularButton';
