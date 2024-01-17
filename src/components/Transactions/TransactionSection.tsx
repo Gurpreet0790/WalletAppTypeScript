@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import styled from "styled-components/native";
 import { TransactionSectionProps } from "./types";
-import RegularText from "../components/Texts/RegularText";
-import SmallText from "../components/Texts/SmallText";
-import { colors } from "../components/Colors";
+import RegularText from "../Texts/RegularText";
+import SmallText from "../Texts/SmallText";
+import { colors } from "../Colors";
 import TransactionItem from "./TransactionItem";
 
 
@@ -11,7 +11,7 @@ const TransactionBackgroundView = styled.View`
 width: 100%;
 flex: 2;
 padding-left: 5px;
-padding-bottom: 15px;
+padding-bottom: 25px;
 `;
 
 const TransactionRow = styled.View`

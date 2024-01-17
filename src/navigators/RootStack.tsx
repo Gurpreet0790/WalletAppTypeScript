@@ -7,13 +7,17 @@ import { colors } from "../components/Colors";
 import Greetings from "../components/Header/Greetings";
 import Profile from "../components/Header/Profile";
 import avatarImg from "../../assets/ProfileImage.png";
+import { CardProps } from "../components/Cards/types";
+import BalanceScreen from "../screens/BalanceScreen";
+import { Ionicons } from "@expo/vector-icons";
 
-export type RootSTackParamList = {
+export type RootStackParamList = {
     Welcome: undefined;
     Home: undefined;
+    Balance: CardProps;
 };
 
-const Stack = createStackNavigator<RootSTackParamList>()
+const Stack = createStackNavigator<RootStackParamList>()
 
 const RootStack: FunctionComponent = () => {
     return (
@@ -40,7 +44,7 @@ const RootStack: FunctionComponent = () => {
                             paddingRight: 25,
                         },
                     }}
-                    initialRouteName="Home"
+                    initialRouteName="Balance"
                 >
                     <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="Home" component={HomeScreen}
@@ -57,7 +61,20 @@ const RootStack: FunctionComponent = () => {
                         }
                         }
                     />
-
+                    <Stack.Screen name="Balance" component={BalanceScreen} options={({ route }) => ({
+                        headerTitle: route.params.alais,
+                        headerTitleAlign: "center",
+                        headerBackImage: (props) => (<Ionicons
+                            {...props}
+                            name="chevron-back"
+                            size={25}
+                            color={colors.secondary}
+                        />
+                        ),
+                        headerLeftContainerStyle: {
+                            paddingLeft: 0,
+                        },
+                    })} />
                 </Stack.Navigator>
             </NavigationContainer>
         </>

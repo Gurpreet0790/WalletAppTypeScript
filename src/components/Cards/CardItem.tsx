@@ -39,15 +39,13 @@ width: 100%;
 `;
 
 const Logo = styled.Image`
-flex: 1;
+flex: 2;
 resize-mode:contain;
 height: 80%;
 width: 100%;
 `;
 
 const CardItem: FunctionComponent<CardProps> = (props) => {
-
-    { console.log("Props data in CardBgImg is", CardBgImg); }
 
     const handlePress = () => { };
 

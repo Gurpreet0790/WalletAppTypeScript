@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import styled from "styled-components/native";
 import { TransactionAviProps, TransactionProps, TransactionSectionProps } from "./types";
-import RegularText from "../components/Texts/RegularText";
-import SmallText from "../components/Texts/SmallText";
-import { colors } from "../components/Colors";
+import RegularText from "../Texts/RegularText";
+import SmallText from "../Texts/SmallText";
+import { colors } from "../Colors";
 import TransactionAvi from "./TransactionAvi";
 import { View } from "react-native";
 // import CardItem from "./CardItem";

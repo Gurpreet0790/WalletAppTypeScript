@@ -5,7 +5,13 @@ import CardSection from "../components/Cards/CardSection";
 import { Container } from "../components/Shared";
 import VisaCardImage from "../../assets/visa_white.png";
 import masterCardImage from "../../assets/masterCard.png";
-import TransactionSection from "../Transactions/TransactionSection";
+import TransactionSection from "../components/Transactions/TransactionSection";
+import SendMoneySection from "../components/SendMoney/SendMoneySection";
+
+import Portrait1 from "../../assets/UserImages/Portrait1.png";
+import Portrait2 from "../../assets/UserImages/Portrait2.png";
+import Portrait3 from "../../assets/UserImages/Portrait3.png";
+import Portrait4 from "../../assets/UserImages/Portrait4.png";
 
 const HomeContainer = styled(Container)`
 background-color: ${colors.graylight};
@@ -58,29 +64,29 @@ const HomeScreen: FunctionComponent = () => {
             },
         },
         {
-            id: 1,
+            id: 2,
             title: "Shopping",
             subTitle: "Amazon",
             amount: "-$50.50",
             date: "19th Dec 2023",
             art: {
                 icon: "cart",
-                background: colors.primary,
+                background: colors.tertiary,
             },
         },
         {
-            id: 1,
+            id: 3,
             title: "Travel",
             subTitle: "Air Canada",
             amount: "-$570.50",
             date: "10th Feb 2024",
             art: {
                 icon: "airplane",
-                background: colors.primary,
+                background: colors.accent,
             },
         },
         {
-            id: 1,
+            id: 4,
             title: "Digital",
             subTitle: "Mobile Phone",
             amount: "-$120.50",
@@ -92,11 +98,42 @@ const HomeScreen: FunctionComponent = () => {
         },
 
     ]
+    const SendMoneyData = [
+        {
+            id: 1,
+            name: "Reet Dhillon",
+            amount: "1200.50",
+            background: colors.tertiary,
+            image: Portrait1,
+        },
+        {
+            id: 2,
+            name: "Prayas",
+            amount: "4290.50",
+            background: colors.primary,
+            image: Portrait3,
+        },
+        {
+            id: 3,
+            name: "Lilly",
+            amount: "9290.50",
+            background: colors.secondary,
+            image: Portrait2,
+        },
+        {
+            id: 4,
+            name: "Liam",
+            amount: "8790.50",
+            background: colors.accent,
+            image: Portrait4,
+        }
+    ]
     return (
         <>
             <HomeContainer>
                 <CardSection data={CardData} />
                 <TransactionSection data={TransactionData} />
+                <SendMoneySection data={SendMoneyData} />
             </HomeContainer>
         </>
     );
