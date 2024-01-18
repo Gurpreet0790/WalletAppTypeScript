@@ -7,12 +7,13 @@ export interface AmountProps {
 }
 
 
-//export interface BalanceCardProps extends CardProps {
 export interface BalanceCardProps extends CardProps {
-    id: number;
-    accountNo: string;
-    balance: number;
-    alais?: String;
-    logo?: ImageSourcePropType;
+    // export interface BalanceCardProps {
+    //     id: number;
+    //     accountNo: string;
+    //     balance: number;
+    //     alais?: String;
+    //     logo?: ImageSourcePropType;
+
 }
 

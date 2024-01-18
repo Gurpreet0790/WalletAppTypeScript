@@ -3,12 +3,6 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components/native'
 import { Container } from '../components/Shared';
 import { colors } from '../components/Colors';
-import backgroundImg from "../../assets/WelcomeScreenBackground.png";
-import BigText from '../components/Texts/BigText';
-import SmallText from '../components/Texts/SmallText';
-import RegularButton from '../components/Button/RegularButton';
-
-
 import { RootStackParamList } from '../navigators/RootStack';
 import { StackScreenProps } from '@react-navigation/stack';
 import AmountSection from '../components/Balance/AmountSection';
@@ -24,8 +18,8 @@ padding: 25px;
 flex: 1;
 `;
 
+
 const BalanceScreen: FunctionComponent<props> = ({ route }) => {
-    { console.log("Parameters are", route); }
     return (
         <BalanceContainer>
             <StatusBar style="dark" />

@@ -8,6 +8,9 @@ import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 import { View } from "react-native";
 
+//navigation
+import { useNavigation } from "@react-navigation/native";
+import { Props as HomeProps } from "../../screens/HomeScreen";
 
 const CardBackground = styled.ImageBackground`
 height: 75%;
@@ -47,7 +50,10 @@ width: 100%;
 
 const CardItem: FunctionComponent<CardProps> = (props) => {
 
-    const handlePress = () => { };
+    const navigation = useNavigation<HomeProps["navigation"]>();
+    const handlePress = () => {
+        navigation.navigate("Balance", { ...props });
+    };
 
     return (
         <>

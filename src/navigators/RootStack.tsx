@@ -44,7 +44,7 @@ const RootStack: FunctionComponent = () => {
                             paddingRight: 25,
                         },
                     }}
-                    initialRouteName="Balance"
+                    initialRouteName="Welcome"
                 >
                     <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="Home" component={HomeScreen}
@@ -64,8 +64,8 @@ const RootStack: FunctionComponent = () => {
                     <Stack.Screen name="Balance" component={BalanceScreen} options={({ route }) => ({
                         headerTitle: route.params.alais,
                         headerTitleAlign: "center",
-                        headerBackImage: (props) => (<Ionicons
-                            {...props}
+                        headerBackImage: (CardProps) => (<Ionicons
+                            {...CardProps}
                             name="chevron-back"
                             size={25}
                             color={colors.secondary}

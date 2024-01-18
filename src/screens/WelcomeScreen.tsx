@@ -7,7 +7,10 @@ import backgroundImg from "../../assets/WelcomeScreenBackground.png";
 import BigText from '../components/Texts/BigText';
 import SmallText from '../components/Texts/SmallText';
 import RegularButton from '../components/Button/RegularButton';
+import { RootStackParamList } from '../navigators/RootStack';
+import { StackScreenProps } from '@react-navigation/stack';
 
+type Props = StackScreenProps<RootStackParamList, "Welcome">;
 
 const WelcomeContainer = styled(Container)`
 background-color: ${colors.secondary};
@@ -35,11 +38,10 @@ padding: 25px;
 justify-content: flex-end;
 `;
 
-const WelcomeScreen: FunctionComponent = () => {
-    { console.log("Entered into Welcome SCreen", backgroundImg); }
+const WelcomeScreen: FunctionComponent<Props> = ({ navigation }) => {
     return (
         <>
-            <StatusBar style='light' />
+            <StatusBar style='dark' />
             <WelcomeContainer>
                 <TopSection>
                     <TopImage source={backgroundImg} />
@@ -51,7 +53,7 @@ const WelcomeScreen: FunctionComponent = () => {
                     <SmallText textStyle={{ width: "70%", marginBottom: 25 }}>
                         Best Payment Method, connect your money to your friends. You can send money to your loved ones in one click.
                     </SmallText>
-                    <RegularButton onPress={() => { }}>Get Started</RegularButton>
+                    <RegularButton onPress={() => { navigation.navigate("Home") }}>Get Started</RegularButton>
                 </BootomSection>
             </WelcomeContainer>
         </>

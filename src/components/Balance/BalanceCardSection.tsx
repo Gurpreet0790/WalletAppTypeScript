@@ -15,7 +15,7 @@ const BalanceCardSection: FunctionComponent<BalanceCardProps> = (props) => {
     { console.log("Balance Card Props is", props) }
     return (
         <BalanceCardSectionBackground>
-            {/* <BalanceCard {...props} /> */}
+            <BalanceCard {...props} />
         </BalanceCardSectionBackground>
     );
 };
